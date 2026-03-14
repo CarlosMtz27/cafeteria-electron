@@ -1,0 +1,17 @@
+{
+  appId: "com.cafeteria.panel",
+  productName: "Panel Cafetería",
+  directories: {
+    output: "release"
+  },
+  files: [
+    "dist",
+    "dist-electron"
+  ],
+  win: {
+    target: "nsis"
+  },
+  mac: {
+    target: "dmg"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "cafeteria-electron",
+  "version": "1.0.0",
+  "description": "Panel de sucursal — App Cafetería",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev":       "electron-vite dev",
+    "build":     "electron-vite build",
+    "preview":   "electron-vite preview",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "npm run build && electron-builder --mac"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.51.0",
+    "axios":                 "^1.7.3",
+    "lucide-react":          "^0.414.0",
+    "react":                 "^18.3.1",
+    "react-dom":             "^18.3.1",
+    "zustand":               "^4.5.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react":  "^4.3.1",
+    "autoprefixer":          "^10.4.19",
+    "electron":              "^31.0.0",
+    "electron-builder":      "^24.13.3",
+    "electron-vite":         "^2.3.0",
+    "postcss":               "^8.4.40",
+    "tailwindcss":           "^3.4.7"
+  },
+  "build": {
+    "appId":       "com.cafeteria.panel",
+    "productName": "Panel Cafetería",
+    "directories": { "output": "release" },
+    "win": { "target": "nsis" },
+    "mac": { "target": "dmg" }
+  }
+}
