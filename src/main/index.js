@@ -9,7 +9,7 @@ function crearVentana() {
     minHeight: 600,
     title: 'Panel Cafetería',
     webPreferences: {
-      preload:          join(__dirname, '../dist-electron/preload.js'),
+  preload: 'src/preload/index.js',
       contextIsolation: true,
       nodeIntegration:  false,
     },
